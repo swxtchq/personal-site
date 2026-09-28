@@ -1,0 +1,239 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0c1420;
+  color: #d9dde2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 { margin: 0; font-weight: bold; }
+
+p { color: #d9dde2; }
+
+a { color: #d9dde2; }
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* NAVIGATION */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #223144;
+  font-size: 16px;
+}
+
+.inline { display: inline; margin: 0; }
+
+.linklike {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #d9dde2;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* MESSAGES */
+
+.flash,
+.errors {
+  margin-top: 20px;
+  padding: 2px 14px;
+  border-left: 3px solid #d9dde2;
+}
+
+.flash p,
+.errors p { margin: 10px 0; }
+
+/* HERO */
+
+.hero {
+  padding: 60px 0 50px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  border-bottom: 1px solid #223144;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero-text .role {
+  margin-top: 16px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* ABOUT */
+
+.about {
+  padding: 50px 0;
+  border-bottom: 1px solid #223144;
+}
+
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 65ch;
+  margin: 0 0 16px;
+}
+
+.now { margin-top: 24px; }
+
+.now-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+  font-size: 16px;
+  border-top: 1px solid #223144;
+}
+
+/* HOBBIES */
+
+.interests {
+  padding: 50px 0;
+  border-bottom: 1px solid #223144;
+}
+
+.interests h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.interest-item { margin-bottom: 18px; }
+
+.interest-item h3 {
+  font-size: 19px;
+  margin-bottom: 4px;
+}
+
+.interest-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* CONTACT */
+
+.connect { padding: 50px 0 60px; }
+
+.connect h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 17px;
+}
+
+/* FORMS */
+
+.form-page {
+  max-width: 420px;
+  padding: 40px 0 60px;
+}
+
+.form-page h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: #101a28;
+  border: 1px solid #223144;
+  border-radius: 4px;
+  color: #d9dde2;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #d9dde2;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.check input { width: auto; }
+
+.hint {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+button.primary {
+  margin-top: 22px;
+  padding: 10px 20px;
+  background: #101a28;
+  color: #d9dde2;
+  border: 1px solid #d9dde2;
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-info { margin: 20px 0 10px; }
+
+.profile-info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #223144;
+}
+
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-photo img { height: 300px; }
+  .now-row { flex-direction: column; gap: 4px; }
+}
