@@ -72,11 +72,12 @@ async function createUser({ name, username, email, passwordHash }) {
   return user;
 }
 
-async function updateUser(id, changes) {
+async function updateProfile(id, { name, bio }) {
   const users = getUsers();
   const user = users.find((u) => u.id === id);
   if (!user) return;
-  Object.assign(user, changes);
+  user.name = name;
+  user.bio = bio;
   writeJson(USERS_FILE, users);
 }
 
@@ -122,7 +123,7 @@ module.exports = {
   findUserByEmail,
   findUserByUsername,
   createUser,
-  updateUser,
+  updateProfile,
   createSession,
   findSession,
   deleteSession

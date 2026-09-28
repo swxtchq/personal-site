@@ -13,6 +13,6 @@
   "author": "Alikhan Ibraimov",
   "license": "MIT",
   "dependencies": {
-    "mongodb": "^6.8.0"
+    "pg": "^8.16.0"
   }
 }

@@ -183,7 +183,7 @@ async function saveProfile(ctx) {
   if (errors.length > 0) {
     return sendHtml(ctx.res, 400, views.profile(ctx, { form: { name, bio }, errors }));
   }
-  await db.updateUser(ctx.user.id, { name, bio });
+  await db.updateProfile(ctx.user.id, { name, bio });
   flash(ctx, "Profile saved.");
   redirect(ctx.res, "/profile");
 }
